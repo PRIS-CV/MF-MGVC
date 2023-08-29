@@ -1,5 +1,5 @@
 # MF-MGVC
-* Code release for Multi-Frequency Feature Enhancement for Multi-Granularity Visual Classification
+* Code release for 《Multi-Frequency Feature Enhancement for Multi-Granularity Visual Classification》
 # Requirements
 * python 3.6
 * PyTorch 1.2.0
