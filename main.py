@@ -22,8 +22,6 @@ import torchvision.transforms as transforms
 #from Triresnet1 import tri_resnet50
 from octresnet1 import oct_resnet50
 
-logger = logging.getLogger('fine-grained-or-not')
-
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 BATCH_SIZE = 64
