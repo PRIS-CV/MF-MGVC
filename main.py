@@ -110,13 +110,13 @@ class model_bn(nn.Module):
 
         self.classifier_2 = nn.Sequential(
             #nn.Dropout(0.2),    
-            nn.Linear(562, 38),
+            nn.Linear(584, 38),
             nn.Softmax(1)
         )
 
         self.classifier_3 = nn.Sequential(
             #nn.Dropout(0.2),
-            nn.Linear(212, 200),
+            nn.Linear(256, 200),
             
             nn.Softmax(1)
         )
@@ -135,9 +135,9 @@ class model_bn(nn.Module):
         x_l = self.features_l(x_l)
 
         
-        x_h1 =  x_h[:,  0:150]
-        x_h2 =  x_h[:,150:300]
-        x_h3 =  x_h[:,300:512]
+        x_h1 =  x_h[:,  0:128]
+        x_h2 =  x_h[:,128:256]
+        x_h3 =  x_h[:,256:512]
 
         order_input  = torch.cat([x_h1, x_h2.detach(),x_h3.detach(),x_l.detach(),x_z.detach()],1)
         family_input = torch.cat([x_h2,x_h3.detach(),x_z.detach()],1)
